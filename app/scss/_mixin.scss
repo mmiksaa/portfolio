@@ -1,0 +1,18 @@
+@mixin line-clamp($num) {
+  -webkit-line-clamp: $num;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin maxw($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin maxh($height) {
+  @media only screen and (max-height: $height) {
+    @content;
+  }
+}

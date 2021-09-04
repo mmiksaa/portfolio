@@ -1,0 +1,385 @@
+@import 'fonts';
+@import 'vars';
+@import 'mixin';
+@import 'reset';
+@import 'global';
+
+.header {
+  color: #fff;
+  position: relative;
+  min-height: 700px;
+  
+  @include maxw($exlr) {
+    min-height: 1100px;
+    overflow: hidden;
+  }
+
+  @include maxw($exsm) {
+    min-height: 0;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+
+  &::before {
+    background-image: url('../images/icons/web.svg');
+    max-width: 145px;
+    min-height: 150px;
+    right: 0;
+    top: 0;
+
+    @include maxw(1450px) {
+      max-width: 65px;
+      width: 100%;
+      min-height: 70px;
+      background-size: cover;
+    }
+
+    @include maxw($md) {
+      display: none;
+    }
+  }
+  
+  &::after {
+    background-image: url('../images/icons/semicircle.svg');
+    max-width: 110px;
+    min-height: 60px;
+    bottom: 35px;
+    right: 20px;
+
+    @include maxw($exsm) {
+      display: none;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom: 30px;
+
+    @include maxw($md) {
+      position: fixed;
+      width: 100%;
+      padding: 5px 10px;
+      background-color: rgba(48, 49, 51, 0.8);
+      right: 0;
+      transition: 0.6s;
+      z-index: 20;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 21;
+  }
+
+  &__nav {
+    @include maxw($md) {
+      display: block;
+      max-width: 300px;
+      transform: translateX(200%);
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: rgba(48, 49, 51, 0.6);
+      min-height: 100vh;
+      z-index: 20;
+      border-left: 3px solid $red;
+      transition: 0.5s transform;
+      backdrop-filter: blur(20px);
+
+      &--active {
+        transform: translateX(0);
+      }
+    }
+
+    @include maxw(440px) {
+      max-width: 100%;
+      border: none;
+    }
+
+  }
+
+  &__list {
+    display: flex;
+    font-size: 24px;
+
+    @include maxw($lr) {
+      margin-right: 10px;
+    }
+
+    @include maxw($md) {
+      margin-top: 100px;
+      max-height: calc(100vh + 10px);
+      flex-direction: column;
+      padding-bottom: 200px;
+      overflow: auto;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 80px;
+
+      @include maxw($lr) {
+        margin-right: 60px;
+      }
+
+      @include maxw($md) {
+        margin: 0 0 20px 0;
+      }
+
+      @include maxw(440px) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    transition: 0.6s color;
+
+    @include maxw($md) {
+      display: block;
+      width: 100%;
+      padding-left: 50px;
+      font-size: 35px;
+    }
+
+    @include maxw(440px) {
+      padding: 10px 0 10px 50px;
+    }
+
+    @include maxw($exsm) {
+      font-size: 30px;
+    }
+
+    &:hover {
+      color: $red;
+
+      &::before {
+        transform: rotate(270deg);
+        background-color: #fff;
+      }
+
+      &::after {
+        transform: rotate(0);
+        background-color: #fff;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      width: 9px;
+      background-color: $red;
+      position: absolute;
+      background-color: $red;
+      height: 3px;
+      top: 50%;
+      left: -15px;
+      transition: 0.5s background-color, 0.4s transform;
+
+      @include maxw($md) {
+        left: 20px;
+      }
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1340px;
+    font-family: 'Poiret One', sans-serif;
+
+    @include maxw($exlr) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include maxw($md) {
+      padding: 100px 20px 0 0;
+    }
+
+    @include maxw($exsm) {
+      padding: 80px 0 0 0;
+    }
+  }
+
+  &__img {
+    background-image: url('../images/content/header/1.jpg');
+    width: 610px;
+    background-size: cover;
+    height: 535px;
+    margin-right: 25px;
+    position: relative;
+
+    @include maxw($exlr) {
+      order: 1;
+      margin-right: 0;
+    }
+
+    @include maxw($sm) {
+      height: 435px;
+    }
+
+    @include maxw($exsm) {
+      height: 350px;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      width: 35px;
+      height: 165px;
+    }
+
+    &::before {
+      background-image: url('../images/icons/dots(16).svg');
+      bottom: 10px;
+      right: -15px;
+
+      @include maxw($exsm) {
+        width: 8px;
+        right: 10px;
+      }
+    }
+
+    &::after {
+      background-image: url('../images/icons/dots(16).svg');
+      top: -90px;
+      left: 0;
+      transform: rotate(-90deg);
+
+      @include maxw($exlr) {
+        display: none;
+      }
+    }
+  }
+
+  &__box {
+    max-width: 640px;
+
+    @include maxw($exlr) {
+      margin-bottom: 40px;
+    }
+
+    @include maxw($md) {
+      padding-left: 20px;
+    }
+
+    @include maxw($exsm) {
+      padding: 0 10px 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 60px;
+
+    @include maxw($sm) {
+      font-size: 40px;
+    }
+
+    @include maxw($exsm) {
+      font-size: 30px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    font-family: 'Play', sans-serif;
+
+    @include maxw($sm) {
+      font-size: 19px;
+    }
+
+    @include maxw(320px) {
+      font-size: 16px;
+    }
+  }
+
+  &__wrapp {
+    display: flex;
+    align-items: center;
+
+    @include maxw($sm) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &::after {
+      content: '';
+      background-image: url('../images/icons/wawe.svg');
+      max-width: 115px;
+      width: 100%;
+      height: 35px;
+      background-repeat: no-repeat;
+      margin-left: 70px;
+      
+      @include maxw($md) {
+        display: none;
+      }
+    }
+  }
+
+  &__connection {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+
+    @include maxw($sm) {
+      flex-direction: row;
+    }
+
+    @include maxw($exsm) {
+      flex-direction: column;
+    }
+
+    &+& {
+      margin-left: 65px;
+
+      @include maxw($sm) {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__connection-link {
+    color: $red;
+    display: block;
+    transition: 0.4s color;
+
+    @include maxw($sm) {
+      margin-left: 5px;
+    }
+
+    @include maxw($exsm) {
+      margin-left: 0;
+    }
+
+    &:hover {
+      color: #ccc;
+    }
+  }
+}
