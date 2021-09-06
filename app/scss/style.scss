@@ -8,7 +8,7 @@
   color: #fff;
   position: relative;
   min-height: 700px;
-  
+
   @include maxw($exlr) {
     min-height: 1100px;
     overflow: hidden;
@@ -44,7 +44,7 @@
       display: none;
     }
   }
-  
+
   &::after {
     background-image: url('../images/icons/semicircle.svg');
     max-width: 110px;
@@ -335,7 +335,7 @@
       height: 35px;
       background-repeat: no-repeat;
       margin-left: 70px;
-      
+
       @include maxw($md) {
         display: none;
       }
@@ -345,7 +345,6 @@
   &__connection {
     display: flex;
     flex-direction: column;
-    font-size: 18px;
 
     @include maxw($sm) {
       flex-direction: row;
@@ -377,6 +376,133 @@
     @include maxw($exsm) {
       margin-left: 0;
     }
+
+    &:hover {
+      color: #ccc;
+    }
+  }
+}
+
+.about-me {
+  padding: 70px 0 40px;
+  background-color: #fff;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include maxw($lr) {
+      flex-direction: column;
+      // align-items: flex-start;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    max-width: 635px;
+
+    @include maxw($lr) {
+      max-width: 100%;
+    }
+
+    &+& {
+      margin-top: 20px;
+    }
+  }
+
+  &__wrapp {
+    position: relative;
+    z-index: 2;
+    margin-right: 20px;
+
+    @include maxw($lr) {
+      margin: 0 0 50px 0;
+    }
+
+    @include maxw(400px) {
+      font-size: 17px;
+      text-align: center
+    }
+  }
+
+  &__text {
+    @include maxw(400px) {
+      @include line-clamp(20);
+    }
+  }
+
+  &__img-wrapp {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__img {
+    background-image: url('../images/content/about-me/1.jpg');
+    width: 445px;
+    height: 495px;
+    margin-top: 20px;
+    object-fit: cover;
+    position: relative;
+
+    @include maxw(1265px) {
+      margin-right: 50px;
+    }
+
+    @include maxw($exlr) {
+      width: 400px;
+      height: 400px;
+    }
+
+    @include maxw($sm) {
+      display: none;
+    }
+
+
+    &::before {
+      content: '';
+      background-image: url('../images/icons/semicircle--black.svg');
+      background-size: cover;
+      width: 160px;
+      height: 90px;
+      position: absolute;
+      bottom: -20px;
+      left: -120px;
+      z-index: -1;
+
+      @include maxw($lr) {
+        width: 113px;
+        height: 60px;
+        left: -80px;
+      }
+    }
+
+    &::after {
+      content: '';
+      background-image: url('../images/icons/round(dots).svg');
+      background-size: cover;
+      width: 95px;
+      height: 145px;
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      z-index: -1;
+
+      @include maxw($lr) {
+        width: 75px;
+        height: 95px;
+      }
+    }
+  }
+
+  &__link {
+    color: #F24E3D;
+    display: block;
+    margin-top: 15px;
+    transition: 0.8s color;
 
     &:hover {
       color: #ccc;
