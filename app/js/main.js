@@ -6,4 +6,8 @@ $(function () {
     $('body').toggleClass('body--active')
   });
 
+  $('.works__button').on('click', function() {
+    $('.works__item:last-child').slideToggle();
+  });
+
 });
