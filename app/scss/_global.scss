@@ -65,6 +65,11 @@ body {
   color: #fff;
   position: relative;
 
+  @include maxw($exsm) {
+    padding: 10px;
+    font-size: 16px;
+  }
+
   &::after {
     content: '';
     width: calc(100% - 16px);
