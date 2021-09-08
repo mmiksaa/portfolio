@@ -3,6 +3,7 @@ body {
   font-family: 'Play', sans-serif;
   font-size: 18px;
   line-height: 1.2;
+  padding-bottom: 200px;
 }
 
 .body--active {
@@ -138,5 +139,62 @@ body {
       transform: translateY(-15px) rotate(405deg) !important;
       opacity: 1;
     }
+  }
+}
+
+.progress-bar {
+  max-width: 350px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 0 3px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  &__bottom {
+    background-color: $red;
+    position: relative;
+    height: 8px;
+    border-radius: 8px;
+
+    &::after {
+      content: '';
+      background-color: #fff;
+      position: absolute;
+      width: calc(100% - 8px);
+      height: 2px;
+      left: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 3px;
+      z-index: 1;
+    }
+  }
+}
+
+.circle-bar {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__inner {
+    transform: rotate(90deg);
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__percent {
+    color: #000;
+    position: absolute;
   }
 }

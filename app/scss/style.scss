@@ -511,7 +511,7 @@
 }
 
 .works {
-  padding: 52px 0 0 0;
+  padding: 50px 0 65px;
 
   &__title {
     color: #fff;
@@ -751,5 +751,90 @@
 
   &__list--bottom {
     display: none;
+  }
+}
+
+.skills {
+  background-color: #000;
+  color: #fff;
+  padding: 90px 0 35px;
+
+  &__title {
+    color: #fff;
+    margin-bottom: 35px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    max-width: 345px;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__bar {
+
+    &--html {
+      background-color: #F99826;
+
+      &::after {
+        width: 98%;
+      }
+    }
+
+    &--css {
+      background-color: #D5326D;
+
+      &::after {
+        width: 90%;
+      }
+    }
+
+    &--scss {
+      background-color: #8CC63F;
+
+      &::after {
+        width: 80%;
+      }
+    }
+
+    &--js {
+      background-color: #77C4D3;
+
+      &::after {
+        width: 50%;
+      }
+    }
+
+    &--jquery {
+      
+      &::after {
+        width: 30%;
+      }
+    }
+  }
+
+  &__circle {
+    background: linear-gradient(45deg, #E6E7E8 -15496%, #FFFFFF 1096%);
+    max-width: 237px;
+    height: 237px;
+
+    &-inner {
+      max-width: 178px;
+      max-height: 178px;
+    }
+  }
+
+  &__percent {
+    left: 15px;
+    font-size: 36px;
   }
 }

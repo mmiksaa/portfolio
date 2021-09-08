@@ -10,4 +10,10 @@ $(function () {
     $('.works__item:last-child').slideToggle();
   });
 
+  $('#circle').circleProgress({
+    value: 0.50,
+    emptyFill: "rgba(0, 0, 0, 0)",
+    
+  });
+
 });

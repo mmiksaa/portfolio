@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "gulp-file-include": "^2.3.0",
-    "gulp-svg-sprite": "^1.5.0"
+    "gulp-svg-sprite": "^1.5.0",
+    "jquery-circle-progress": "^1.2.2"
   }
 }
