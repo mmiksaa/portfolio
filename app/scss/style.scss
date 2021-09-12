@@ -1,6 +1,7 @@
 @import 'fonts';
 @import 'vars';
 @import 'mixin';
+@import 'libs';
 @import 'reset';
 @import 'global';
 
@@ -511,6 +512,8 @@
 }
 
 .works {
+
+
   padding: 50px 0 65px;
 
   &__title {
@@ -527,11 +530,7 @@
   }
 
   &__item {
-    display: none;
-
-    &:nth-child(-n+4) {
-      display: block;
-    }
+    transition: 1s opacity;
 
     &:not(:last-child) {
       margin-bottom: 40px;
@@ -747,6 +746,11 @@
   &__button {
     display: block;
     margin: 0 auto;
+
+    &--active {
+      background-color: #ccc;
+      color: $red;
+    }
   }
 
   &__list--bottom {
@@ -982,5 +986,57 @@
       bottom: 40px;
       font-size: 36px;
     }
+  }
+}
+
+.connection {
+  background-color: #fff;
+  padding: 110px 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-image: url('../images/icons/web-red.svg');
+    width: 293.41px;
+    height: 275.3px;
+    left: 0;
+    bottom: 0;
+    width: 173px;
+    height: 125px;
+    background-size: cover;
+    position: absolute;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+  
+  &__item {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    position: relative;
+    padding-left: 40px;
+
+    &::before {
+      content: url('../images/icons/right-arrow.svg');
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__links {
+    color: $red;
   }
 }

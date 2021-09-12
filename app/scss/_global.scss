@@ -48,6 +48,22 @@ body {
   -webkit-tap-highlight-color: rgba(222, 222, 222, 0.2);
 }
 
+.scroll {
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f9f9fd;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(180deg, $red, #000);
+  }
+}
+
 .container {
   max-width: 1180px;
   padding: 0 20px;
@@ -174,6 +190,15 @@ body {
   }
 }
 
+.hide {
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+}
+
 .progress-bar {
   max-width: 350px;
 
@@ -232,5 +257,103 @@ body {
   &__percent {
     color: #000;
     position: absolute;
+  }
+}
+
+.form {
+  background-color: #303133;
+  padding: 40px 65px;
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+  position: relative;
+
+  &::after {
+    content: '';
+    background-image: url('../images/icons/dots-red(16).svg');
+    width: 30px;
+    height: 152px;
+    background-size: cover;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+  }
+
+  &::before {
+    content: '';
+    background-image: url('../images/icons/cube.svg');
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    bottom: -32px;
+    left: -32px;
+  }
+
+  &__svg {
+    max-width: 28px;
+    width: 100%;
+    height: 28px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    fill: $red;
+  }
+
+  &__input {
+    outline: transparent;
+    background-color: transparent;
+    border: none;
+    padding-bottom: 5px;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    color: $red;
+
+    &::placeholder {
+      color: #fff;
+      font-size: 16px;
+    }
+
+    & + & {
+      margin-top: 20px;
+    } 
+  }
+
+  &__input--textarea {
+    height: 100px;
+    margin-bottom: 30px;
+  }
+
+  &__work {
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+  }
+
+  &__work-btn {
+    padding: 8px;
+    margin: 0 0 5px 30px;
+    display: block; 
+
+    &--active {
+      background-color: #ccc;
+      color: #000;
+    }
+
+    &::after {
+      bottom: -5px;
+    }
+  }
+
+  &__input--work {
+    font-size: 16px;
+    color: #fff;
+    height: 25px;
+  }
+
+  &__btn {
+    margin: 30px auto 0;
+    max-width: 350px;
+    width: 100%;
   }
 }
