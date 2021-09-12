@@ -10,10 +10,19 @@ $(function () {
     $('.works__item:last-child').slideToggle();
   });
 
-  $('#circle').circleProgress({
-    value: 0.50,
+  $('.circle').circleProgress({
     emptyFill: "rgba(0, 0, 0, 0)",
     
   });
+
+  // var Scrollbar = window.Scrollbar;
+
+  // const options = {
+  //   'damping': 0.04  
+  // }
+
+  // Scrollbar.init(document.querySelector('body'), options);
+
+  new WOW().init();
 
 });

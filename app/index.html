@@ -12,8 +12,8 @@
 
 <body>
 
-  <header class="header">
-    <div class="container">
+  <header class="header myBox">
+    <div class="container wow slideInLeft">
       <div class="header__top">
         <a class="logo header__logo" href="#">
           <img src="images/logo.svg" alt="логотип">
@@ -21,10 +21,10 @@
 
         <nav class="header__nav">
           <ul class="header__list">
-            <li class="header__item"><a class="header__link" href="#">Обо мне</a></li>
-            <li class="header__item"><a class="header__link" href="#">Портфолио</a></li>
-            <li class="header__item"><a class="header__link" href="#">Навыки</a></li>
-            <li class="header__item"><a class="header__link" href="#">Контакты</a></li>
+            <li class="header__item"><a class="header__link hover" href="#">Обо мне</a></li>
+            <li class="header__item"><a class="header__link hover" href="#">Портфолио</a></li>
+            <li class="header__item"><a class="header__link hover" href="#">Навыки</a></li>
+            <li class="header__item"><a class="header__link hover" href="#">Контакты</a></li>
           </ul>
         </nav>
 
@@ -204,77 +204,124 @@
     <section class="skills">
       <div class="container">
         <h2 class="title skills__title">Мои основные навыки</h2>
-        <div class="skilss__inner">
+        <div class="skills__inner">
           <div class="skills__left">
             <p class="skills__text">
               Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum
               используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное
               распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст..
             </p>
+
+            <ul class="skills__list">
+              <li class="skills__item">
+                <div class="progress-bar">
+                  <div class="progress-bar__top">
+                    <span class="progress-bar__name">html</span>
+                    <span class="progress-bar__percent">90%</span>
+                  </div>
+                  <div class="progress-bar__bottom skills__bar--html"></div>
+                </div>
+              </li>
+
+              <li class="skills__item">
+                <div class="progress-bar">
+                  <div class="progress-bar__top">
+                    <span class="progress-bar__name">css</span>
+                    <span class="progress-bar__percent">85%</span>
+                  </div>
+                  <div class="progress-bar__bottom skills__bar--css"></div>
+                </div>
+              </li>
+
+              <li class="skills__item">
+                <div class="progress-bar">
+                  <div class="progress-bar__top">
+                    <span class="progress-bar__name">scss</span>
+                    <span class="progress-bar__percent">80%</span>
+                  </div>
+                  <div class="progress-bar__bottom skills__bar--scss"></div>
+                </div>
+              </li>
+
+              <li class="skills__item">
+                <div class="progress-bar">
+                  <div class="progress-bar__top">
+                    <span class="progress-bar__name">js</span>
+                    <span class="progress-bar__percent">50%</span>
+                  </div>
+                  <div class="progress-bar__bottom skills__bar--js"></div>
+                </div>
+              </li>
+
+              <li class="skills__item">
+                <div class="progress-bar">
+                  <div class="progress-bar__top">
+                    <span class="progress-bar__name">jquery</span>
+                    <span class="progress-bar__percent">70%</span>
+                  </div>
+                  <div class="progress-bar__bottom skills__bar--jquery"></div>
+                </div>
+              </li>
+            </ul>
           </div>
 
-          <ul class="skills__list">
-            <li class="skills__item">
-              <div class="progress-bar">
-                <div class="progress-bar__top">
-                  <span class="progress-bar__name">html</span>
-                  <span class="progress-bar__percent">98%</span>
+          <ul class="skills__right">
+            <li class="skills__item-circle skills__item-circle--jquery">
+              <div class="circle-bar">
+                <div class="circle-bar__inner circle" id="circle" data-size="178"
+                  data-fill="{ &quot;color&quot;: &quot;#F24E3D&quot;}" data-thickness="60" data-value="0.70">
                 </div>
-                <div class="progress-bar__bottom skills__bar--html"></div>
+
+                <span class="circle-bar__percent">70%</span>
+                <img class="circle-bar__img" src="images/icons/jquery.svg" alt="">
               </div>
             </li>
 
-            <li class="skills__item">
-              <div class="progress-bar">
-                <div class="progress-bar__top">
-                  <span class="progress-bar__name">css</span>
-                  <span class="progress-bar__percent">90%</span>
+            <li class="skills__item-circle skills__item-circle--scss">
+              <div class="circle-bar">
+                <div class="circle-bar__inner circle" id="circle" data-size="178"
+                  data-fill="{ &quot;color&quot;: &quot;#8CC63F&quot;}" data-thickness="60" data-value="0.80">
                 </div>
-                <div class="progress-bar__bottom skills__bar--css"></div>
+
+                <span class="circle-bar__percent">80%</span>
+                <img class="circle-bar__img" src="images/icons/sass.svg" alt="">
               </div>
             </li>
 
-            <li class="skills__item">
-              <div class="progress-bar">
-                <div class="progress-bar__top">
-                  <span class="progress-bar__name">scss</span>
-                  <span class="progress-bar__percent">80%</span>
+            <li class="skills__item-circle skills__item-circle--js">
+              <div class="circle-bar">
+                <div class="circle circle-bar__inner" data-size="145"
+                  data-fill="{ &quot;color&quot;: &quot;#77C4D3&quot;}" data-thickness="40" data-value="0.50">
                 </div>
-                <div class="progress-bar__bottom skills__bar--scss"></div>
+
+                <span class="circle-bar__percent">50%</span>
+                <img class="circle-bar__img" src="images/icons/js.svg" alt="">
               </div>
             </li>
 
-            <li class="skills__item">
-              <div class="progress-bar">
-                <div class="progress-bar__top">
-                  <span class="progress-bar__name">js</span>
-                  <span class="progress-bar__percent">50%</span>
+            <li class="skills__item-circle skills__item-circle--css">
+              <div class="circle-bar">
+                <div class="circle circle-bar__inner" data-size="220"
+                  data-fill="{ &quot;color&quot;: &quot;rgba(212, 20, 90, 1)&quot;}" data-thickness="65" data-value="0.85">
                 </div>
-                <div class="progress-bar__bottom skills__bar--js"></div>
+
+                <span class="circle-bar__percent">85%</span>
+                <img class="circle-bar__img" src="images/icons/css.svg" alt="">
               </div>
             </li>
 
-            <li class="skills__item">
-              <div class="progress-bar">
-                <div class="progress-bar__top">
-                  <span class="progress-bar__name">jquery</span>
-                  <span class="progress-bar__percent">30%</span>
+            <li class="skills__item-circle skills__item-circle--html">
+              <div class="circle-bar">
+                <div class="circle circle-bar__inner" data-size="315"
+                  data-fill="{ &quot;color&quot;: &quot;rgba(247, 147, 30, 1)&quot;}" data-thickness="110"
+                  data-value="0.90">
                 </div>
-                <div class="progress-bar__bottom skills__bar--jquery"></div>
+
+                <span class="circle-bar__percent">90%</span>
+                <img class="circle-bar__img" src="images/icons/html.svg" alt="">
               </div>
             </li>
           </ul>
-
-          <div class="skills__right">
-            <div class="circle-bar skills__circle">
-              <div class="circle-bar__inner skills__circle-inner" id="circle" data-size="178"
-                data-fill="{ &quot;color&quot;: &quot;#F24E3D&quot;}" data-thickness="50">
-              </div>
-
-              <span class="circle-bar__percent skills__percent">50%</span>
-              <img class="circle-bar__img" src="images/icons/jquery.svg" alt="">
-            </div>
-          </div>
         </div>
       </div>
     </section>

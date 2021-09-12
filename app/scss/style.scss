@@ -757,7 +757,7 @@
 .skills {
   background-color: #000;
   color: #fff;
-  padding: 90px 0 35px;
+  padding: 90px 0 165px;
 
   &__title {
     color: #fff;
@@ -767,16 +767,34 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include maxw($exlr) {
+      flex-direction: column;
+    }
   }
 
   &__text {
     max-width: 345px;
     margin-bottom: 30px;
+
+    @include maxw($lr) {
+      max-width: 100%;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-bottom: 25px;
+    }
+  }
+
+  .progress-bar {
+    @include maxw($lr) {
+      max-width: 70%;
+    }
+
+    @include maxw($md) {
+      max-width: 100%;
     }
   }
 
@@ -786,7 +804,7 @@
       background-color: #F99826;
 
       &::after {
-        width: 98%;
+        width: 90%;
       }
     }
 
@@ -794,7 +812,7 @@
       background-color: #D5326D;
 
       &::after {
-        width: 90%;
+        width: 85%;
       }
     }
 
@@ -815,26 +833,154 @@
     }
 
     &--jquery {
-      
+
       &::after {
-        width: 30%;
+        width: 70%;
       }
     }
   }
 
-  &__circle {
-    background: linear-gradient(45deg, #E6E7E8 -15496%, #FFFFFF 1096%);
-    max-width: 237px;
-    height: 237px;
+  &__right {
+    position: relative;
+    max-width: 875px;
+    width: 100%;
+    min-height: 600px;
 
-    &-inner {
-      max-width: 178px;
-      max-height: 178px;
+    @include maxw($lr) {
+      display: none;
     }
   }
 
-  &__percent {
-    left: 15px;
-    font-size: 36px;
+  &__item-circle--html {
+    position: absolute;
+    max-width: 420px;
+    width: 100%;
+    height: 420px;
+    top: 150px;
+    right: 0;
+    z-index: 3;
+
+    &::after {
+      content: url('../images/icons/html-line.svg');
+      position: absolute;
+      top: -50px;
+      right: 30px;
+    }
+
+    .circle-bar__inner {
+      transform: rotate(160deg);
+    }
+
+    .circle-bar__percent {
+      right: 70px;
+      top: 115px;
+      font-size: 36px;
+    }
+  }
+
+  &__item-circle--css {
+    position: absolute;
+    top: 60px;
+    right: 300px;
+    max-width: 295px;
+    width: 100%;
+    height: 295px;
+
+    &::after {
+      content: url('../images/icons/css-line.svg');
+      position: absolute;
+      top: -30px;
+      right: -10px;
+    }
+
+    .circle-bar__inner {
+      transform: rotate(50deg);
+    }
+
+    .circle-bar__percent {
+      left: 35px;
+      top: 95px;
+      font-size: 36px;
+    }
+  }
+
+  &__item-circle--jquery {
+    max-width: 237px;
+    width: 100%;
+    z-index: 2;
+    left: 160px;
+    top: 210px;
+    height: 237px;
+    position: absolute;
+
+    &::after {
+      content: url('../images/icons/jquery-line.svg');
+      position: absolute;
+      bottom: -30px;
+      left: -40px;
+    }
+
+    .circle-bar__inner {
+      transform: rotate(30deg);
+    }
+
+    .circle-bar__percent {
+      left: 15px;
+      bottom: 70px;
+      font-size: 36px;
+    }
+  }
+
+  &__item-circle--scss {
+    max-width: 237px;
+    width: 100%;
+    height: 237px;
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    left: 280px;
+
+    &::after {
+      content: url('../images/icons/scss-line.svg');
+      position: absolute;
+      bottom: -30px;
+      left: -40px;
+    }
+
+    .circle-bar__inner {
+      transform: rotate(0);
+    }
+
+    .circle-bar__percent {
+      left: 20px;
+      bottom: 60px;
+      font-size: 36px;
+    }
+  }
+
+  &__item-circle--js {
+    max-width: 190px;
+    height: 190px;
+    width: 100%;
+    bottom: -100px;
+    left: 450px;
+    position: absolute;
+
+    &::after {
+      content: url('../images/icons/js-line.svg');
+      position: absolute;
+      bottom: -50px;
+      right: -40px;
+    }
+
+    .circle-bar__inner {
+      transform: rotate(50deg);
+    }
+
+    .circle-bar__percent {
+      left: 20px;
+      bottom: 40px;
+      font-size: 36px;
+    }
   }
 }
