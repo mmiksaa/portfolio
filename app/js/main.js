@@ -54,9 +54,4 @@ $(function () {
     });
   });
 
-  var element = $('.form__input');
-  if (element.is(':checked')) {
-    $('.form__svg').toggleClass('form__svg--active');
-  }
-
 });

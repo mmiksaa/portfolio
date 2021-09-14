@@ -113,10 +113,35 @@ body {
   border-radius: 9px;
   color: #fff;
   position: relative;
+  outline: transparent;
+  transition: 0.5s background-color, 0.5s color;
 
   @include maxw($exsm) {
     padding: 10px;
     font-size: 16px;
+  }
+
+  &:focus {
+    background-color: #fff;
+    color: $red;
+
+    &::after {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    background-color: #fff;
+    color: $red;
+
+    &::after {
+      background-color: $red;
+    }
+  }
+
+  &:active {
+    background-color: #000;
   }
 
   &::after {
@@ -127,6 +152,7 @@ body {
     position: absolute;
     left: 8px;
     bottom: -10px;
+    transition: 0.5s background-color, 0.3s opacity, 0.4s transform;
   }
 }
 
@@ -277,6 +303,10 @@ body {
     position: absolute;
     right: 5px;
     bottom: 5px;
+
+    @include maxw($sm) {
+      display: none;
+    }
   }
 
   &::before {
@@ -312,6 +342,10 @@ body {
     &::placeholder {
       color: #fff;
       font-size: 16px;
+
+      @include maxw($exsm) {
+        font-size: 14px;
+      }
     }
 
     & + & {
@@ -322,12 +356,24 @@ body {
   &__input--textarea {
     height: 100px;
     margin-bottom: 30px;
+
+    @include maxw($exsm) {
+      height: 60px;
+    }
   }
 
   &__work {
     display: flex;
     align-items: flex-end;
     cursor: pointer;
+
+    @include maxw($sm) {
+      flex-direction: column;
+    }
+
+    &:hover {
+      color: red;
+    }
   }
 
   &__work-btn {
@@ -349,6 +395,10 @@ body {
     font-size: 16px;
     color: #fff;
     height: 25px;
+
+    @include maxw($exsm) {
+      font-size: 12px;
+    }
   }
 
   &__btn {

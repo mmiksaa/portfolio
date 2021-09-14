@@ -146,6 +146,7 @@
 
   &__link {
     position: relative;
+    outline: transparent;
     transition: 0.6s color;
 
     @include maxw($md) {
@@ -161,6 +162,20 @@
 
     @include maxw($exsm) {
       font-size: 30px;
+    }
+
+    &:focus {
+      color: $red;
+
+      &::before {
+        transform: rotate(270deg);
+        background-color: #fff;
+      }
+
+      &::after {
+        transform: rotate(0);
+        background-color: #fff;
+      }
     }
 
     &:hover {
@@ -368,7 +383,8 @@
   &__connection-link {
     color: $red;
     display: block;
-    transition: 0.4s color;
+    transition: 0.4s color, 0.5s border;
+    outline: transparent;
 
     @include maxw($sm) {
       margin-left: 5px;
@@ -376,6 +392,11 @@
 
     @include maxw($exsm) {
       margin-left: 0;
+    }
+
+    &:focus {
+      color: #ccc;
+      border-bottom: 1px solid $red;
     }
 
     &:hover {
@@ -502,11 +523,18 @@
   &__link {
     color: #F24E3D;
     display: block;
+    width: fit-content;
     margin-top: 15px;
-    transition: 0.8s color;
+    transition: 0.4s color;
+    outline: transparent;
+
+    &:focus {
+      color: rgba(0, 0, 0, 0.508);
+      border-bottom: 1px solid $red;
+    }
 
     &:hover {
-      color: #ccc;
+      color: rgba(0, 0, 0, 0.508);
     }
   }
 }
@@ -1010,10 +1038,22 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include maxw($lr) {
+      flex-direction: column;
+    }
   }
 
   &__title {
     margin-bottom: 25px;
+  }
+
+  &__list {
+    @include maxw($lr) {
+      margin-bottom: 50px;
+      // display: grid;
+      // grid-template-columns: repeat(2, 1fr);
+    }
   }
   
   &__item {
@@ -1023,20 +1063,58 @@
     position: relative;
     padding-left: 40px;
 
+    @include maxw($lr) {
+      flex-direction: row;
+    }
+
+    @include maxw($exsm) {
+      font-size: 14px;
+      padding-left: 0;
+    }
+
     &::before {
-      content: url('../images/icons/right-arrow.svg');
+      content: '';
+      background-image: url('../images/icons/right-arrow.svg');
+      width: 33px;
+      height: 33px;
+      background-size: cover;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       left: 0;
+
+      @include maxw($exsm) {
+        display: none;
+      }
     }
 
     &:not(:last-child) {
       margin-bottom: 35px;
+
+      @include maxw($lr) {
+        margin-bottom: 15px;
+      }
     }
   }
 
-  &__links {
+  &__link {
     color: $red;
+    width: fit-content;
+    transition: 0.3s color;
+
+    &:hover {
+      color: #ccc;
+    }
+  }
+
+  &__form {
+    @include maxw($lr) {
+      margin: 0 auto;      
+    }
+
+    @include maxw($sm) {
+      max-width: 100%;
+      padding: 30px 15px;
+    }
   }
 }
