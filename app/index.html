@@ -25,10 +25,10 @@
 
         <nav class="header__nav">
           <ul class="header__list">
-            <li class="header__item"><a class="magic-hover header__link" href="#">Портфолио</a></li>
-            <li class="header__item"><a class="magic-hover header__link" href="#">Обо мне</a></li>
-            <li class="header__item"><a class="magic-hover header__link" href="#">Навыки</a></li>
-            <li class="header__item"><a class="magic-hover header__link" href="#">Контакты</a></li>
+            <li class="header__item"><a class="magic-hover header__link" href="#works">Портфолио</a></li>
+            <li class="header__item"><a class="magic-hover header__link" href="#about">Обо мне</a></li>
+            <li class="header__item"><a class="magic-hover header__link" href="#skills">Навыки</a></li>
+            <li class="header__item"><a class="magic-hover header__link" href="#connection">Контакты</a></li>
           </ul>
         </nav>
 
@@ -66,7 +66,7 @@
   </header>
 
   <main class="main">
-    <section class="about-me">
+    <section class="about-me" id="about">
       <div class="container">
         <h2 class="title about-me__title">Полезная информация обо мне</h2>
         <div class="about-me__inner">
@@ -81,7 +81,7 @@
               трактат по теории этики был очень популярен в эпоху Возрождения. Первая строка Lorem Ipsum, "Lorem ipsum
               dolor sit amet..", происходит от одной из строк в разделе 1.10.32
             </p>
-            <a class="about-me__link" href="#">Задайте мне вопрос</a>
+            <a class="about-me__link" href="#form">Задайте мне вопрос</a>
           </div>
 
           <div class="about-me__img-wrapp">
@@ -91,7 +91,7 @@
       </div>
     </section>
 
-    <section class="works">
+    <section class="works" id="works">
       <div class="container">
         <h2 class="title works__title">Примеры моих работ</h2>
         <ul class="works__list">
@@ -226,7 +226,7 @@
       </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
       <div class="container">
         <h2 class="title skills__title">Мои основные навыки</h2>
         <div class="skills__inner">
@@ -351,7 +351,7 @@
       </div>
     </section>
 
-    <section class="connection">
+    <section class="connection" id="connection">
       <div class="container">
         <div class="connection__inner">
           <div class="connection__links">
@@ -378,7 +378,7 @@
               </li>
             </ul>
           </div>
-          <div class="connection__right">
+          <div class="connection__right" id="form">
             <form class="form connection__form" action="#">
               <svg class="form__svg">
                 <use xlink:href="images/sprite.svg#cross"></use>

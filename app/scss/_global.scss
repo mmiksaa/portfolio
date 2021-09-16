@@ -31,12 +31,13 @@ body #magicPointer.pointer-blur {
   position: fixed;
   top: 0;
   left: 0;
-  background: lightgrey;
-  height: 100%;
+  z-index: 100;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #303133;
 }
 
 .disppear {

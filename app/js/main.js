@@ -69,4 +69,13 @@ $(function () {
     loader.classList.add("disppear");
   }
 
+  $(".header__nav, .about-me__wrapp").on("click", "a", function (e) {
+    e.preventDefault();
+    var id = $(this).attr('href'),
+      top = $(id).offset().top;
+    $('body,html').animate({
+      scrollTop: top
+    }, 700);
+  });
+
 });
