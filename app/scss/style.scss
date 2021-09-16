@@ -160,7 +160,7 @@ body .magic-hover {
   &__link {
     position: relative;
     outline: transparent;
-    transition: 0.6s color;
+    transition: 0.6s color !important;
 
     @include maxw($md) {
       display: block;
@@ -396,7 +396,7 @@ body .magic-hover {
   &__connection-link {
     color: $red;
     display: block;
-    transition: 0.4s color, 0.5s border;
+    transition: 0.4s color, 0.5s border !important;
     outline: transparent;
 
     @include maxw($sm) {

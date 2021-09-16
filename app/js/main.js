@@ -60,4 +60,13 @@ $(function () {
     "hoverEffect": "pointer-blur", 
     "cursorOuter": "circle-basic",
   });
+
+  var loader = document.querySelector(".preload")
+
+  window.addEventListener("load", vanish);
+
+  function vanish() {
+    loader.classList.add("disppear");
+  }
+
 });

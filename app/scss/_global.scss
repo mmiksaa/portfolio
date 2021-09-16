@@ -27,6 +27,29 @@ body #magicPointer.pointer-blur {
   height: 20px;
 }
 
+.preload {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: lightgrey;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.disppear {
+  animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 .scrollbar-thumb {
   background-color: rgba(242, 78, 61, 0.5) !important;
 }
