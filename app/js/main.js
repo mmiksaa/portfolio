@@ -54,4 +54,10 @@ $(function () {
     });
   });
 
+  magicMouse({
+    "outerWidth": 50,
+    "outerHeight": 50,
+    "hoverEffect": "pointer-blur", 
+    "cursorOuter": "circle-basic",
+  });
 });

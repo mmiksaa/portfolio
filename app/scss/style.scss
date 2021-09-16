@@ -5,10 +5,23 @@
 @import 'reset';
 @import 'global';
 
+html,
+* {
+  cursor: none;
+}
+
+body .magic-hover {
+  transition: none;
+}
+
 .header {
   color: #fff;
   position: relative;
   min-height: 700px;
+
+  svg {
+    fill: red;
+  }
 
   @include maxw($exlr) {
     min-height: 1100px;

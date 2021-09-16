@@ -12,6 +12,21 @@ body {
   }
 }
 
+body #magicMouseCursor {
+  border: 1px solid $red;
+}
+
+body #magicPointer {
+  background: #000;
+  border: 1px solid #fff;
+  z-index: 9999;
+}
+
+body #magicPointer.pointer-blur {
+  width: 20px;
+  height: 20px;
+}
+
 .scrollbar-thumb {
   background-color: rgba(242, 78, 61, 0.5) !important;
 }
@@ -19,7 +34,7 @@ body {
 #cursor, #aura {
   position: absolute;
   border-radius: 100%;
-  transition: 0.5s;
+  transition: 0.5s cubic-bezier(.75, -1.27, .3, 2.33) transform, 0.5s cubic-bezier(.75, -1.27, .3, 2.33) opacity;
   user-select: none;
   pointer-events: none;
   z-index: 1000;
@@ -114,7 +129,7 @@ body {
   color: #fff;
   position: relative;
   outline: transparent;
-  transition: 0.5s background-color, 0.5s color;
+  transition: 0.5s background-color, 0.5s color !important;
 
   @include maxw($exsm) {
     padding: 10px;
@@ -242,6 +257,7 @@ body {
     position: relative;
     height: 8px;
     border-radius: 8px;
+    overflow: hidden;
 
     &::after {
       content: '';

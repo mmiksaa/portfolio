@@ -10,7 +10,7 @@
   <title>RLS PORTFOLIO</title>
 </head>
 
-<body>
+<body id="app">
 
   <header class="header myBox">
     <div class="container">
@@ -21,10 +21,10 @@
 
         <nav class="header__nav">
           <ul class="header__list">
-            <li class="header__item"><a class="header__link hover" href="#">Обо мне</a></li>
-            <li class="header__item"><a class="header__link hover" href="#">Портфолио</a></li>
-            <li class="header__item"><a class="header__link hover" href="#">Навыки</a></li>
-            <li class="header__item"><a class="header__link hover" href="#">Контакты</a></li>
+            <li class="header__item"><a class="header__link magic-hover" href="#">Обо мне</a></li>
+            <li class="header__item"><a class="header__link magic-hover" href="#">Портфолио</a></li>
+            <li class="header__item"><a class="header__link magic-hover" href="#">Навыки</a></li>
+            <li class="header__item"><a class="header__link magic-hover" href="#">Контакты</a></li>
           </ul>
         </nav>
 
@@ -36,8 +36,8 @@
     </div>
 
     <div class="container header__main">
-      <div class="header__img"></div>
-      <div class="header__box">
+      <div class="header__img wow fadeIn" data-wow-delay="0.3s"></div>
+      <div class="header__box wow fadeInRight" data-wow-delay="0.4s">
         <h1 class="header__title"><span class="red">Frontend</span> Developer</h1>
         <p class="header__text">
           Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает
@@ -66,7 +66,7 @@
       <div class="container">
         <h2 class="title about-me__title">Полезная информация обо мне</h2>
         <div class="about-me__inner">
-          <div class="about-me__wrapp">
+          <div class="about-me__wrapp wow fadeInLeft" data-wow-delay="0.4s">
             <p class="about-me__text">
               Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но
               это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух
@@ -81,7 +81,7 @@
           </div>
 
           <div class="about-me__img-wrapp">
-            <div class="about-me__img"></div>
+            <div class="about-me__img wow fadeIn"></div>
           </div>
         </div>
       </div>
@@ -92,9 +92,9 @@
         <h2 class="title works__title">Примеры моих работ</h2>
         <ul class="works__list">
           <li class="works__item">
-            <div class="works__box">
+            <div class="works__box wow fadeIn" data-wow-delay="0.3s">
               <div class="works__wrapp">
-                <a class="works__link" href="#">
+                <a class="works__link magic-hover" href="#">
                   <img class="works__img" src="images/content/works/1.jpg" alt="">
                 </a>
 
@@ -113,10 +113,10 @@
           </li>
 
           <li class="works__item">
-            <div class="works__box">
+            <div class="works__box wow fadeIn" data-wow-delay="0.3s">
               <div class="works__wrapp">
-                <a class="works__link" href="#">
-                  <img class="works__img" src="images/content/works/1.jpg" alt="">
+                <a class="works__link magic-hover" href="#">
+                  <img class="works__img" src="images/content/works/2.jpg" alt="">
                 </a>
 
                 <svg>
@@ -134,10 +134,10 @@
           </li>
 
           <li class="works__item">
-            <div class="works__box">
+            <div class="works__box wow fadeIn" data-wow-delay="0.3s">
               <div class="works__wrapp">
-                <a class="works__link" href="#">
-                  <img class="works__img" src="images/content/works/1.jpg" alt="">
+                <a class="works__link magic-hover" href="#">
+                  <img class="works__img" src="images/content/works/3.jpg" alt="">
                 </a>
 
                 <svg>
@@ -155,10 +155,10 @@
           </li>
 
           <li class="works__item">
-            <div class="works__box">
+            <div class="works__box wow fadeIn" data-wow-delay="0.3s">
               <div class="works__wrapp">
-                <a class="works__link" href="#">
-                  <img class="works__img" src="images/content/works/1.jpg" alt="">
+                <a class="works__link magic-hover" href="#">
+                  <img class="works__img" src="images/content/works/4.jpg" alt="">
                 </a>
 
                 <svg>
@@ -178,8 +178,8 @@
           <li class="works__item wow fadeInLeft">
             <div class="works__box">
               <div class="works__wrapp">
-                <a class="works__link" href="#">
-                  <img class="works__img" src="images/content/works/1.jpg" alt="">
+                <a class="works__link magic-hover" href="#">
+                  <img class="works__img" src="images/content/works/5.jpg" alt="">
                 </a>
 
                 <svg>
@@ -199,8 +199,8 @@
           <li class="works__item wow fadeInRight">
             <div class="works__box">
               <div class="works__wrapp">
-                <a class="works__link" href="#">
-                  <img class="works__img" src="images/content/works/1.jpg" alt="">
+                <a class="works__link magic-hover" href="#">
+                  <img class="works__img" src="images/content/works/6.jpg" alt="">
                 </a>
 
                 <svg>
@@ -218,7 +218,7 @@
           </li>
         </ul>
 
-        <button class="btn works__button">Ознакомиться с остальными работами</button>
+        <button class="btn works__button magic-hover">Ознакомиться с остальными работами</button>
       </div>
     </section>
 
@@ -286,7 +286,7 @@
             </ul>
           </div>
 
-          <ul class="skills__right">
+          <ul class="skills__right wow fadeIn" data-wow-delay="0.5s">
             <li class="skills__item-circle skills__item-circle--jquery">
               <div class="circle-bar">
                 <div class="circle-bar__inner circle" id="circle" data-size="178"
@@ -354,23 +354,23 @@
             <h2 class="title connection__title">контакты</h2>
             <ul class="connection__list">
               <li class="connection__item">Email:
-                <a class="connection__link" href="#">information@googlemail.com</a>
+                <a class="connection__link magic-hover" href="#">information@googlemail.com</a>
               </li>
 
               <li class="connection__item">Telegram:
-                <a class="connection__link" href="#">miksa</a>
+                <a class="connection__link magic-hover" href="#">miksa</a>
               </li>
 
               <li class="connection__item">Instagram:
-                <a class="connection__link" href="https://www.instagram.com/4.jeb/">4.jeb</a>
+                <a class="connection__link magic-hover" href="https://www.instagram.com/4.jeb/">4.jeb</a>
               </li>
 
               <li class="connection__item caps">github:
-                <a class="connection__link" href="https://github.com/mmiksaa">mmiksaa</a>
+                <a class="connection__link magic-hover" href="https://github.com/mmiksaa">mmiksaa</a>
               </li>
 
               <li class="connection__item">Discord:
-                <a class="connection__link" href="#">@miksadeveloper</a>
+                <a class="connection__link magic-hover" href="#">@miksadeveloper</a>
               </li>
             </ul>
           </div>

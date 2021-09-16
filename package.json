@@ -21,9 +21,11 @@
     "smooth-scrollbar": "^8.6.3"
   },
   "dependencies": {
+    "countup.js": "^2.0.8",
     "gulp-file-include": "^2.3.0",
     "gulp-svg-sprite": "^1.5.0",
     "jquery-circle-progress": "^1.2.2",
+    "simple-parallax-js": "^5.6.2",
     "wow.js": "^1.2.2"
   }
 }
