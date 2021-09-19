@@ -653,6 +653,7 @@ body .magic-hover {
     max-width: inherit;
     width: 100%;
     height: inherit;
+    outline: transparent;
 
     &::after {
       content: '';
@@ -664,6 +665,16 @@ body .magic-hover {
       left: 0;
       opacity: 0;
       transition: 0.5s opacity;
+    }
+
+    &:focus {
+      .works__img {
+        transform: scale(1.1);
+      }
+
+      &::after {
+        opacity: 0.5;
+      }
     }
 
     &:hover {
@@ -1064,11 +1075,9 @@ body .magic-hover {
   &__list {
     @include maxw($lr) {
       margin-bottom: 50px;
-      // display: grid;
-      // grid-template-columns: repeat(2, 1fr);
     }
   }
-  
+
   &__item {
     display: flex;
     flex-direction: column;
@@ -1113,7 +1122,14 @@ body .magic-hover {
   &__link {
     color: $red;
     width: fit-content;
-    transition: 0.3s color;
+    outline: transparent;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s color !important;
+
+    &:focus {
+      color: #ccc;
+      border-color: $red;
+    }
 
     &:hover {
       color: #ccc;
@@ -1122,7 +1138,7 @@ body .magic-hover {
 
   &__form {
     @include maxw($lr) {
-      margin: 0 auto;      
+      margin: 0 auto;
     }
 
     @include maxw($sm) {

@@ -12,6 +12,11 @@ body {
   }
 }
 
+*::selection {
+  color: $red;
+  background: rgb(31, 27, 27);
+}
+
 body #magicMouseCursor {
   border: 1px solid $red;
 }
@@ -274,6 +279,21 @@ body #magicPointer.pointer-blur {
     padding: 0 3px;
     margin-bottom: 15px;
     text-transform: uppercase;
+  }
+
+  &__name {
+    transition: 0.5s color !important;
+    border-bottom: 1px solid transparent;
+    outline: transparent;
+
+    &:focus {
+      border-color: #fff;
+      color: $red;
+    }
+
+    &:hover {
+      color: $red;
+    }
   }
 
   &__bottom {
