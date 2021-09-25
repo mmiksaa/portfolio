@@ -429,7 +429,6 @@ body .magic-hover {
 
     @include maxw($lr) {
       flex-direction: column;
-      // align-items: flex-start;
     }
   }
 
@@ -537,13 +536,14 @@ body .magic-hover {
     color: #F24E3D;
     display: block;
     width: fit-content;
+    border-bottom: 1px solid transparent;
     margin-top: 15px;
-    transition: 0.4s color;
+    transition: 0.4s color !important;
     outline: transparent;
 
     &:focus {
       color: rgba(0, 0, 0, 0.508);
-      border-bottom: 1px solid $red;
+      border-color: $red;
     }
 
     &:hover {
