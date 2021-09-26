@@ -18,6 +18,7 @@ body .magic-hover {
   color: #fff;
   position: relative;
   min-height: 700px;
+  
 
   svg {
     fill: red;
@@ -92,6 +93,10 @@ body .magic-hover {
   &__logo {
     position: relative;
     z-index: 21;
+
+    &:active {
+      opacity: 0.4;
+    }
   }
 
   &__nav {
@@ -829,6 +834,11 @@ body .magic-hover {
     }
   }
 
+  &__left {
+    max-width: 350px;
+    width: 100%;
+  }
+
   &__text {
     max-width: 345px;
     margin-bottom: 30px;
@@ -936,7 +946,7 @@ body .magic-hover {
 
   &__item-circle--css {
     position: absolute;
-    top: 60px;
+    top: 30px;
     right: 300px;
     max-width: 295px;
     width: 100%;
@@ -964,7 +974,7 @@ body .magic-hover {
     max-width: 237px;
     width: 100%;
     z-index: 2;
-    left: 160px;
+    left: 120px;
     top: 210px;
     height: 237px;
     position: absolute;
@@ -993,8 +1003,8 @@ body .magic-hover {
     height: 237px;
     position: absolute;
     z-index: 1;
-    bottom: 10px;
-    left: 280px;
+    bottom: -10px;
+    left: 220px;
 
     &::after {
       content: url('../images/icons/scss-line.svg');
@@ -1019,7 +1029,7 @@ body .magic-hover {
     height: 190px;
     width: 100%;
     bottom: -100px;
-    left: 450px;
+    left: 400px;
     position: absolute;
 
     &::after {
