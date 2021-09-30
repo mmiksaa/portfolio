@@ -166,9 +166,16 @@ body #magicPointer.pointer-blur {
   color: #060000;
   text-transform: uppercase;
 
-  @include maxw($sm) {
-    font-size: 25px;
+  @include maxw($lr) {
     text-align: center;
+  }
+
+  @include maxw($sm) {
+    font-size: 30px;
+  }
+
+  @include maxw($exsm) {
+    font-size: 25px;
   }
 }
 
@@ -339,7 +346,7 @@ body #magicPointer.pointer-blur {
       background-color: #fff;
       position: absolute;
       width: calc(100% - 8px);
-      height: 2px;
+      height: 25%;
       left: 4px;
       top: 50%;
       transform: translateY(-50%);
