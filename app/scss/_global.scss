@@ -66,17 +66,6 @@ body #magicPointer.pointer-blur {
   }
 }
 
-.disppear {
-  animation: vanish 1s forwards;
-}
-
-@keyframes vanish {
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
 .scrollbar-thumb {
   background-color: rgba(242, 78, 61, 0.5) !important;
 }

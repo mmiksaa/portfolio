@@ -6,6 +6,12 @@ $(function () {
     $('body').toggleClass('body--active')
   });
 
+  $('.header__link').on('click', function () {
+    $('.burger').toggleClass('burger--active');
+    $('.header__nav').toggleClass('header__nav--active');
+    $('body').toggleClass('body--active')
+  });
+
   $('.circle').circleProgress({
     emptyFill: "rgba(0, 0, 0, 0)",
 
@@ -61,13 +67,9 @@ $(function () {
     "cursorOuter": "circle-basic",
   });
 
-  var loader = document.querySelector(".preload")
-
-  window.addEventListener("load", vanish);
-
-  function vanish() {
-    loader.classList.add("disppear");
-  }
+  $(window).on("load", function () {
+    $(".preload").fadeOut("slow");
+  });
 
   $(".header, .about-me__wrapp").on("click", "a", function (e) {
     e.preventDefault();

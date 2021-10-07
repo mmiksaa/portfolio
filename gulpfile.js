@@ -60,10 +60,7 @@ function  scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/jquery-circle-progress/dist/circle-progress.js',
-    'node_modules/smooth-scrollbar/dist/smooth-scrollbar.js',
     'node_modules/wow.js/dist/wow.js',
-    'node_modules/simple-parallax-js/dist/simpleParallax.js',
-    'node_modules/countup.js/dist/countUp.umd.js',
     'app/js/magic_mouse.js',
     'app/js/main.js'
   ])
