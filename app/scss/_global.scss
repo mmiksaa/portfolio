@@ -56,8 +56,15 @@ body #magicPointer.pointer-blur {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #303133;
   flex-direction: column;
+  background-color: #303133;
+  visibility: visible;
+  transition: 0.5s all;
+
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
 
   &__desc {
     margin-top: 100px;
@@ -65,18 +72,6 @@ body #magicPointer.pointer-blur {
     font-size: 25px;
   }
 }
-
-@keyframes loader {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.hide {
-  opacity: 0;
-  transition: 0.5s all;
-}
-
 
 .scrollbar-thumb {
   background-color: rgba(242, 78, 61, 0.5) !important;

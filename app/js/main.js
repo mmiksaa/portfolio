@@ -67,10 +67,6 @@ $(function () {
     "cursorOuter": "circle-basic",
   });
 
-  $(window).on("load", function () {
-    $(".preload").fadeOut("slow");
-  });
-
   $(".header__nav, .about-me__wrapp").on("click", "a", function (e) {
     e.preventDefault();
     var id = $(this).attr('href'),
@@ -80,13 +76,14 @@ $(function () {
     }, 700);
   });
 
-  let mask = document.querySelector('.preload')
+  document.body.onload = function () {
 
-  window.addEventListener('load', () => {
-    mask.classList.add('hide');
-    setTimeout(() => {
-      preload.remove();
+    setTimeout(function () {
+
+      var preloader = document.getElementById('preload');
+      if (!preloader.classList.contains('hidden')) {
+        preloader.classList.add('hidden');
+      }
     }, 600);
-  });
-
+  }
 });
