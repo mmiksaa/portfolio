@@ -71,13 +71,22 @@ $(function () {
     $(".preload").fadeOut("slow");
   });
 
-  $(".header, .about-me__wrapp").on("click", "a", function (e) {
+  $(".header__nav, .about-me__wrapp").on("click", "a", function (e) {
     e.preventDefault();
     var id = $(this).attr('href'),
       top = $(id).offset().top;
     $('body,html').animate({
       scrollTop: top
     }, 700);
+  });
+
+  let mask = document.querySelector('.preload')
+
+  window.addEventListener('load', () => {
+    mask.classList.add('hide');
+    setTimeout(() => {
+      preload.remove();
+    }, 600);
   });
 
 });

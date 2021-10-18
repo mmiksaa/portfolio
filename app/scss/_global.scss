@@ -66,6 +66,18 @@ body #magicPointer.pointer-blur {
   }
 }
 
+@keyframes loader {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hide {
+  opacity: 0;
+  transition: 0.5s all;
+}
+
+
 .scrollbar-thumb {
   background-color: rgba(242, 78, 61, 0.5) !important;
 }
