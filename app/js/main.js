@@ -13,7 +13,7 @@ $(function () {
 
   document.body.onload = function () {
     setTimeout(function () {
-      $('.preload').addClass('hidden'); //скрываем прелоадер
+      $('.preloader').addClass('hidden'); //скрываем прелоадер
       $('body').removeClass('before-preloader'); //описание ниже
     }, 700);
   };
