@@ -5,20 +5,11 @@
 @import 'reset';
 @import 'global';
 
-html,
-* {
-  cursor: none;
-}
-
-body .magic-hover {
-  transition: none;
-}
 
 .header {
   color: #fff;
   position: relative;
   min-height: 700px;
-  
 
   svg {
     fill: red;
@@ -560,9 +551,11 @@ body .magic-hover {
 }
 
 .works {
-
-
   padding: 50px 0 65px;
+
+  @include maxw($md) {
+    overflow: hidden;
+  }
 
   &__title {
     color: #fff;

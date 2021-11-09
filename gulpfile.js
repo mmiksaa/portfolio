@@ -41,7 +41,7 @@ function browsersync() {
       baseDir: 'app/'
     },
     notofy: false
-  })
+  });
 }
 
 function styles() {
@@ -53,7 +53,7 @@ function styles() {
       grid: true
     }))
     .pipe(dest('app/css'))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 }
 
 function  scripts() {
@@ -67,7 +67,7 @@ function  scripts() {
   .pipe(concat('main.min.js'))
   .pipe(uglify())
   .pipe(dest('app/js'))
-  .pipe(browserSync.stream())
+  .pipe(browserSync.stream());
 }
 
 function images() {
@@ -83,21 +83,22 @@ function images() {
       ]
     })
   ]))
-  .pipe(dest('dist/images'))
+  .pipe(dest('dist/images'));
 }
 
 function build() {
   return src([
     'app/*.html',
     'app/fonts/*',
+    'app/*.php',
     'app/css/style.min.css',
-    'app/js/main.min.js'
+    'app/js/main.min.js',
   ], {base: 'app'})
-  .pipe(dest('dist'))
+  .pipe(dest('dist'));
 }
 
 function cleanDist() {
-  return del('dist')
+  return del('dist');
 }
 
 

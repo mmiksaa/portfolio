@@ -1,21 +1,39 @@
 $(function () {
 
+  // window.onload = function () {
+
+  //   setTimeout(function () {
+
+  //     var preloader = document.getElementById('preload');
+  //     if (!preloader.classList.contains('hidden')) {
+  //       preloader.classList.add('hidden');
+  //     }
+  //   }, 600);
+  // };
+
+  document.body.onload = function () {
+    setTimeout(function () {
+      $('.preload').addClass('hidden'); //скрываем прелоадер
+      $('body').removeClass('before-preloader'); //описание ниже
+    }, 700);
+  };
+
   $('.burger').on('click', function () {
     $('.burger').toggleClass('burger--active');
     $('.header__nav').toggleClass('header__nav--active');
-    $('body').toggleClass('body--active')
+    $('body').toggleClass('body--active');
   });
 
   $('.header__link').on('click', function () {
     $('.burger').toggleClass('burger--active');
     $('.header__nav').toggleClass('header__nav--active');
-    $('body').toggleClass('body--active')
+    $('body').toggleClass('body--active');
   });
 
   $('.circle').circleProgress({
     emptyFill: "rgba(0, 0, 0, 0)",
-
   });
+
 
   new WOW().init();
 
@@ -49,25 +67,23 @@ $(function () {
 
   showButton.addEventListener('click', callback);
 
-
-  ​
-  $('.form__work-btn, #select_file').click(function () {
+  $('.form__work-btn, .select-file').click(function () {
     $('#file').show();
     $('#file').change(function () {
       var filename = $('#file').val();
-      $('#select_file').html(filename);
-      $('.form__btn').addClass('form__btn--active')
+      $('.select-file').html(filename);
+      $('.form__work-btn').addClass('form__work-btn--active');
     });
   });
 
   magicMouse({
     "outerWidth": 50,
     "outerHeight": 50,
-    "hoverEffect": "pointer-blur", 
+    "hoverEffect": "pointer-blur",
     "cursorOuter": "circle-basic",
   });
 
-  $(".header__nav, .about-me__wrapp").on("click", "a", function (e) {
+  $(".header__top, .about-me__wrapp").on("click", "a", function (e) {
     e.preventDefault();
     var id = $(this).attr('href'),
       top = $(id).offset().top;
@@ -76,14 +92,6 @@ $(function () {
     }, 700);
   });
 
-  document.body.onload = function () {
+  
 
-    setTimeout(function () {
-
-      var preloader = document.getElementById('preload');
-      if (!preloader.classList.contains('hidden')) {
-        preloader.classList.add('hidden');
-      }
-    }, 600);
-  }
 });
