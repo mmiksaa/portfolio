@@ -37,35 +37,14 @@ $(function () {
 
   new WOW().init();
 
-  const ITEMS_COUNT_PER_CLICK = 4;
-
-  const showButton = document.querySelector('.works__button');
-  const items = document.querySelectorAll('.works__item');
-  const itemsCount = items.length;
-  let i = ITEMS_COUNT_PER_CLICK;
-
-  for (; i < itemsCount; ++i) {
-    items[i].style.display = 'none';
-    items[i].style.opacity = '1';
-  }
-
-  i = ITEMS_COUNT_PER_CLICK;
-
-  const callback = (event) => {
-    if (i >= itemsCount) {
-      $('.works__button').addClass('works__button--active');
-      return;
+  $(".works__item").slice(0, 4).show();
+  $(".works__button").on("click", function (e) {
+    e.preventDefault();
+    $(".works__item:hidden").slice(0, 4).slideDown();
+    if ($(".works__item:hidden").length == 0) {
+      $(".works__button").text("No Content").addClass("works__button--active");
     }
-
-    items[i++].style.display = '';
-    // items[i++].self.style.opacity = '1';
-    if (i < itemsCount) {
-      // items[i++].self.style.opacity = '1';
-      items[i++].style.display = '';
-    }
-  };
-
-  showButton.addEventListener('click', callback);
+  });
 
   $('.form__work-btn, .select-file').click(function () {
     $('#file').show();

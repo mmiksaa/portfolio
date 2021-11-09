@@ -572,6 +572,7 @@
 
   &__item {
     transition: 1s opacity;
+    display: none;
 
     &:not(:last-child) {
       margin-bottom: 40px;
@@ -800,8 +801,7 @@
     margin: 0 auto;
 
     &--active {
-      background-color: #ccc;
-      color: $red;
+      display: none;
     }
   }
 
